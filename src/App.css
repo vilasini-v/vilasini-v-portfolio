@@ -210,6 +210,7 @@ body {
     margin:auto;
   }
 }
+
 .education{
   background-color: #F0F0C9;
   height:auto;
@@ -220,6 +221,19 @@ body {
   display:flex;
   flex-direction: row;
 }
+@media (max-width: 800px){
+  .skillCards{
+    flex-direction: column;
+    width:200%;
+  }
+  .education{
+    padding: 2rem;
+  }
+  .line-1{
+    flex-direction: column;
+  }
+}
+
 .line-1:nth-last-child(){
   justify-content: flex-end;
 }
@@ -257,5 +271,26 @@ body {
 
 .skillCards{
   display: flex;
-  margin-left: 6rem;
+  justify-items: center;
+}
+
+.internship-section{
+  padding: 1.5rem;
+  background-color: #F0F0C9;
+}
+.internship-section p{
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: "Cardo", serif;
+  padding:1.5rem;
+}
+.hackathon-section{
+  background-color: #5C7457;
+  padding: 1.5rem;
+}
+.hackathon-section p{
+  font-size: 2.5rem;
+  font-weight: 600;
+  font-family: "Cardo", serif;
+  padding:1.5rem;
 }

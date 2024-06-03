@@ -63,7 +63,6 @@
         font-size: 0.5rem;
       }
   }
-  
   @media (max-width: 800px) {
     .nav-logo-container {
       max-width: 140px;
@@ -73,6 +72,18 @@
     }
     .navbar-menu-container {
       display: flex;
+    }
+  }
+  @media (max-width: 800px) {
+    .nav-logo-container {
+      max-width: 140px;
+    }
+    .navbar-links-container {
+      display: none;
+    }
+    .navbar-menu-container {
+      display: flex;
+      z-index: 1000;
     }
     .f1 a{
       font-size: 1.5rem;
