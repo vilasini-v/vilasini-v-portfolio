@@ -1,0 +1,261 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Open sans', sans-serif;
+}
+
+
+.App {
+  min-height: 100vh;
+  width: 100vw;
+  max-width: 1900px;
+  margin: 0rem auto;
+  justify-content: center;
+}
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #f6f6f6;
+}
+
+
+.primary-button {
+  padding: 0.9rem 1.75rem;
+  background-color: #CAD593;
+  outline: none;
+  border: none;
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  cursor: pointer;
+  font-weight: 400;
+  transition: 0.2s;
+  color:black
+}
+.primary-button a{
+  color:black;
+}
+
+.intro-banner{
+  background-color: #5C7457;
+  color:#f4f4f4;
+  display: flex;
+  height:150%;
+  padding-bottom: 6%;
+  flex-direction: row;  
+
+}
+.intro-banner p{
+  font-family: 'Open sans', sans-serif;
+
+}
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #f1f1f1;
+}
+
+.square {
+    position: relative;
+    margin: 0 10px;
+    width: 300;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.square span:nth-child(1) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background: #5C7457;
+    border-radius: 32% 58% 69% 43% / 48% 32% 59% 55%;
+    transition: 0.5s;
+    animation: animate 6s linear infinite;
+}
+
+.linkedin:hover span:nth-child(1) {
+  border: 2px solid black;
+  background: none;
+}
+.square span:nth-child(2) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    background:#F0F0C9;
+    border-radius: 38% 62% 63% 37% / 41% 44% 56% 59%;
+    transition: 0.5s;
+    animation: animate 4s linear infinite;
+}
+
+.linkedin:hover span:nth-child(2) {
+    border: 2px solid black;
+    background: none;
+
+}
+.square span:nth-child(3) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid black;
+    border-radius: 31% 45% 74% 35% / 38% 56% 51% 87%;
+    transition: 0.5s;
+    animation: animate2 10s linear infinite;
+}
+
+.linkedin:hover span:nth-child(3) {
+    border: 2px solid black;
+}
+.content {
+    height:250px;
+    width:250px;
+    background: url(/src/vilasini.jpg) no-repeat;
+    background-size: 100%;
+    z-index: 1000;
+    border-radius: 50%;
+}
+@keyframes animate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes animate2 {
+    0% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.left-intro{
+  flex:1;
+  margin-left: 10%;
+  margin-right: 8%;
+}
+.left-intro h2{
+  font-family:'Cardo', serif;
+  font-size: 5rem;
+  font-weight: 300;
+  margin-bottom: 3%;
+  margin-top: 10%;
+}
+.left-intro p{
+  margin-bottom: 5%;
+  font-size: 1.5rem;
+}
+.left-intro button{
+  margin-bottom: 10%;
+}
+.right-intro{
+  flex:1;
+  margin-right: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.right-intro-top{
+  background-color: #CAD593;
+  width:400px;
+
+  padding: 5%;
+  display: grid;
+  border-radius: 10% 10% 0 0 ;
+  justify-self: center;
+  
+}
+.right-intro-bottom{
+  background-color: #020202;
+  width: 400px;
+  padding:10%;
+}
+
+.right-intro-bottom a{
+  color: #F0F0C9;
+}
+
+
+@media (max-width: 1000px) {
+  .intro-banner{
+    flex-direction: column;
+  }
+  .right-intro{
+    margin:auto;
+  }
+}
+.education{
+  background-color: #F0F0C9;
+  height:auto;
+  padding: 6rem;
+
+}
+.line-1{
+  display:flex;
+  flex-direction: row;
+}
+.line-1:nth-last-child(){
+  justify-content: flex-end;
+}
+
+.education p{
+  font-size: 3.5rem;
+  font-family: 'Cardo', serif;
+  margin-bottom: 2rem;
+}
+.edu-card{
+  background-color: #CAD593;
+  margin:1rem;
+  width:100%;
+  padding: 1.5rem;
+  border-radius: 30px;
+}
+/* styles.css or your CSS file */
+.eduYear{
+  display: flex;
+  justify-content: flex-end;
+}
+.buttons{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.skillCard{
+  background-color: #CAD593;
+  width:40%;
+  padding:1.5rem;
+  border-radius: 30px;
+  margin:1rem;
+  font-size: 1.5rem;  
+}
+
+.skillCards{
+  display: flex;
+  margin-left: 6rem;
+}
