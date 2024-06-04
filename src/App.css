@@ -32,10 +32,13 @@ body {
   cursor: pointer;
   font-weight: 400;
   transition: 0.2s;
-  color:black
+  color:black;
+  
 }
 .primary-button a{
   color:black;
+  text-align: center;
+  width:100%;
 }
 
 .intro-banner{
