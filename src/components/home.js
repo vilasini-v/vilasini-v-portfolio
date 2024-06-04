@@ -118,7 +118,7 @@ const Home=()=>{
       </div>
                 </div>
                 <div className="skillCards">
-            <div className="skillCard 1">
+            <div className="skillCard">
                 <h2>Technical Skills</h2>
             <List>
                 {techList.map((item) => (
@@ -128,7 +128,7 @@ const Home=()=>{
                 ))}
               </List>
             </div>
-            <div className="skillCard 2">
+            <div className="skillCard">
                 <h2>Soft Skills</h2>
             <List>
                 {skills.map((item) => (

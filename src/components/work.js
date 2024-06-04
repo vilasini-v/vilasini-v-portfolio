@@ -19,7 +19,7 @@ const Work = () => {
         {
             name:"WebDex",
             year:"2024",
-            desc:"Secured 1st place in the hackathon conducted by ACM student chapter and received prize money and internship opportunity by Reverse Innovations. Developed a platform that that bridges the gap and creates an easy communication platform between volunteers and NGOs aligning with SDGs 4,8,9 and 17.",
+            desc:"Secured 1st place in the hackathon conducted by ACM student chapter and received prize money and internship opportunity by Reverse Innovations. Developed a platform that bridges the gap and creates an easy communication platform between volunteers and NGOs aligning with SDGs 4,8,9 and 17.",
             techStacks:"HTML5, CSS, JS"
         },
         {
@@ -32,7 +32,7 @@ const Work = () => {
             name:"UI/UX zero to hero",
             year:"2023",
             desc:"Created a FIGMA mockup for Music App and was ranked in top 3 out of 80 participants.",
-            techStacks:""
+            techStacks:"Figma"
         },
         {
             name:"IEEE Robotics Society Hackathon",
@@ -117,7 +117,7 @@ const Work = () => {
                       <ListItemText className="eduYear" primary={item.year}/>
                       </div>
                         <ListItemText className="eduSpecs" primary={<> {item.desc}</> }/>
-                      <ListItemText className="eduGrade" primary={<><b>{item.techStacks}</b></> }/>
+                      <ListItemText className="eduGrade" primary={<><b>Tech Stacks: {item.techStacks}</b></> }/>
                       </div>
                   </ListItem>
                 ))}

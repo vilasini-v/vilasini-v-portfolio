@@ -8,21 +8,23 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from '@mui/icons-material/Menu';
 import './navbar.css';
+import resume from "../vilasini-resume.pdf";
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
+import { Link } from "react-router-dom";
 const Navbar = (props) => {
     const [openMenu, setOpenMenu] = useState(false);
     const menuOptions = [
       {
-        text: "About Me",
-      },
-      {
-        text: "Resume",
+        text: "About  Me",
+        route: "/"
       },
       {
         text:"Work",
+        route: "/work"
       },
       {
         text: "Get in touch",
+        route: '/contact'
       },
     ];
     return (
@@ -31,13 +33,13 @@ const Navbar = (props) => {
           <div className="nav-logo-container">
             <StarRoundedIcon style={{fontSize: '4rem'}}/>
             </div>
-            <a href='' className="name" style={{color: props.color}}>vilasini vijay</a>
+            <a className="name" style={{color: props.color}}>vilasini vijay</a>
             </div>
           <div className="navbar-links-container">
-            <a href="" style={{color: props.color}}>About Me</a>
-            <a href="" style={{color: props.color}}>Resume</a>
-            <a href='' style={{color: props.color}}>Work</a>
-            <button className="primary-button">Get in Touch</button>
+            <a href="/" style={{color: props.color}}>About Me</a>
+            <a href={resume} style={{color: props.color}} download>Resume</a>
+            <a href='/work' style={{color: props.color}}>Work</a>
+            <button className="primary-button"><a href='/contact'>Get in Touch</a></button>
           </div>
           <div className="navbar-menu-container">
             <MenuIcon onClick={() => setOpenMenu(true)} />
@@ -52,11 +54,16 @@ const Navbar = (props) => {
               <List>
                 {menuOptions.map((item) => (
                   <ListItem key={item.text} disablePadding>
-                    <ListItemButton>
+                    <ListItemButton component={Link} to={item.route}>
                       <ListItemText primary={item.text} />
                     </ListItemButton>
                   </ListItem>
                 ))}
+                 <ListItem disablePadding>
+            <ListItemButton component="a" href={resume} download>
+              <ListItemText primary="Resume" />
+            </ListItemButton>
+          </ListItem>
               </List>
               <Divider />
             </Box>
