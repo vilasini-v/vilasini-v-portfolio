@@ -145,16 +145,20 @@ const Work = () => {
                 ))}
               </List>
               <div className="buttons">
+        <Box display="flex" justifyContent="space-between">
+
         {visibleCountHack < hackathons.length && (
-          <Button onClick={handleViewMoreHack}>
+          <Button variant='contained' onClick={handleViewMoreHack}>
             View More
           </Button>
         )}
+        <div style={{height:'10px', width:'10px'}}></div>
         {visibleCountHack > 2 && (
-          <Button onClick={handleViewLessHack} >
+          <Button variant='contained' onClick={handleViewLessHack} >
             View Less
           </Button>
         )}
+        </Box>
       </div>
         </div>
         </section>
