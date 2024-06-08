@@ -148,15 +148,15 @@ const Work = () => {
               <Box display="flex" justifyContent="space-between">
 
         {visibleCountHack < hackathons.length && (
-          <Button variant='contained' onClick={handleViewMoreHack}>
-            View More
-          </Button>
+          <button style={{backgroundColor:'#5c7457', fontSize:'18px', border:'0px',color:'#f0f0c9'}} onClick={handleViewMoreHack}>
+            VIEW MORE
+          </button>
         )}
-        <div style={{height:'10px', width:'10px'}}></div>
+        <div style={{height:'10px', width:'20px'}}></div>
         {visibleCountHack > 2 && (
-          <Button variant='contained' onClick={handleViewLessHack} >
-            View Less
-          </Button>
+          <button style={{backgroundColor:'#5c7457', fontSize:'18px', border:'0px',color:'#f0f0c9'}} onClick={handleViewLessHack} >
+            VIEW LESS
+          </button>
         )}
         </Box>
       </div>
