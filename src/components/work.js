@@ -5,7 +5,13 @@ import { List } from '@mui/material';
 import Button from '@mui/material/Button';
 import { ListItemText } from "@mui/material";
 import ListItem from '@mui/material/ListItem';
+import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
 
+const theme = createMuiTheme({
+  palette: {
+    primary: 'white',
+  },
+});
 const Work = () => {
     const internships=[
         {
@@ -139,19 +145,19 @@ const Work = () => {
                       <ListItemText className="eduYear" primary={item.year}/>
                       </div>
                         <ListItemText className="eduSpecs" primary={<> {item.desc}</> }/>
-                      <ListItemText className="eduGrade" primary={<><b>Tech Stacks: {item.techStacks}</b></> }/>
+                      <ListItemText className="eduGrade" primary={<><b>Tech Stack: {item.techStacks}</b></> }/>
                       </div>
                   </ListItem>
                 ))}
               </List>
               <div className="buttons">
         {visibleCountHack < hackathons.length && (
-          <Button onClick={handleViewMoreHack}>
-            View More
+          <Button color='primary' onClick={handleViewMoreHack}>
+            View {visibleCountHack} More!
           </Button>
         )}
         {visibleCountHack > 2 && (
-          <Button onClick={handleViewLessHack} >
+          <Button color='primary' onClick={handleViewLessHack} >
             View Less
           </Button>
         )}
