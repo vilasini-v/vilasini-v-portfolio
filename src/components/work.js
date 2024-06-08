@@ -5,13 +5,7 @@ import { List } from '@mui/material';
 import Button from '@mui/material/Button';
 import { ListItemText } from "@mui/material";
 import ListItem from '@mui/material/ListItem';
-import { MuiThemeProvider, createMuiTheme } from 'material-ui/styles';
-
-const theme = createMuiTheme({
-  palette: {
-    primary: 'white',
-  },
-});
+import { Box } from '@mui/material';
 const Work = () => {
     const internships=[
         {
@@ -121,7 +115,7 @@ const Work = () => {
               </List>
               <div className="buttons">
         {visibleCountIn < internships.length && (
-          <Button onClick={handleViewMoreIn}>
+          <Button onClick={handleViewMoreIn} >
             View More
           </Button>
         )}
@@ -151,16 +145,20 @@ const Work = () => {
                 ))}
               </List>
               <div className="buttons">
+              <Box display="flex" justifyContent="space-between">
+
         {visibleCountHack < hackathons.length && (
-          <Button color='primary' onClick={handleViewMoreHack}>
-            View {visibleCountHack} More!
+          <Button variant='contained' onClick={handleViewMoreHack}>
+            View More
           </Button>
         )}
+        <div style={{height:'10px', width:'10px'}}></div>
         {visibleCountHack > 2 && (
-          <Button color='primary' onClick={handleViewLessHack} >
+          <Button variant='contained' onClick={handleViewLessHack} >
             View Less
           </Button>
         )}
+        </Box>
       </div>
         </div>
         </section>
