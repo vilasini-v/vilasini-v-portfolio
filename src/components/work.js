@@ -9,10 +9,16 @@ import ListItem from '@mui/material/ListItem';
 const Work = () => {
     const internships=[
         {
-        company:"",
-        year:"",
-        position:"",
-        desc:""
+        company:"Xencia Technologies",
+        year:"June 2024",
+        position:"Data Science Intern",
+        desc:"Worked on projects with langchain, lang graph and open ai."
+        },
+        {
+          company:"Reverse Innovations",
+          year: "June 2024",
+          position:"Software Research Intern",
+          desc:"Worked with flutter to produce a CRM application on the frontend side."
         }
     ];
     const hackathons=[
@@ -63,13 +69,29 @@ const Work = () => {
         techStacks:"Javascript, HTML, CSS, React JS"
     }
     ];
-    const [visibleCount, setVisibleCount] = useState(1);
-    const handleViewMore = () => {
-        setVisibleCount((prevCount) => prevCount + 2);
+    const [visibleCountIn, setVisibleCountIn] = useState(1);
+    const [visibleCountHack, setVisibleCountHack] = useState(2);
+    const [visibleCountProj, setVisibleCountProj]=useState(2);
+    const handleViewMoreIn = () => {
+        setVisibleCountIn((prevCount) => prevCount + 2);
       };
-      const handleViewLess = () => {
-        setVisibleCount((prevCount) => (prevCount - 2 > 0 ? prevCount - 2 : 2));
+      const handleViewLessIn = () => {
+        setVisibleCountIn((prevCount) => (prevCount - 2 > 0 ? prevCount - 2 : 2));
       };
+      const handleViewMoreHack = () => {
+        setVisibleCountHack((prevCount) => prevCount + 2);
+      };
+      const handleViewLessHack = () => {
+        setVisibleCountHack((prevCount) => (prevCount - 2 > 0 ? prevCount - 2 : 2));
+      };
+      const handleViewMoreProj = () => {
+        setVisibleCountProj((prevCount) => prevCount + 2);
+      };
+      const handleViewLessProj = () => {
+        setVisibleCountProj((prevCount) => (prevCount - 2 > 0 ? prevCount - 2 : 2));
+      };
+
+
 
   return (
     <div className='work-container'>
@@ -78,27 +100,27 @@ const Work = () => {
         <p>Internships</p>
                 <div className="edu-group">
                 <List>
-                {internships.slice(0, visibleCount).map((item) => (
+                {internships.slice(0, visibleCountIn).map((item) => (
                   <ListItem key={item.name} disablePadding>
                     <div className="edu-card">
                         <div className="line-1">
-                      <ListItemText className="eduName" primary={<><b><h3>{item.name}</h3></b></>} />
+                      <ListItemText className="eduName" primary={<><b><h3>{item.company}</h3></b></>} />
                       <ListItemText className="eduYear" primary={item.year}/>
                       </div>
-                        <ListItemText className="eduSpecs" primary={<> {item.position}</> }/>
-                      <ListItemText className="eduGrade" primary={<>{item.description}</> }/>
+                        <ListItemText className="" primary={<> <b>Position: </b>{item.position}</> }/>
+                      <ListItemText className="" primary={<>{item.desc}</> }/>
                       </div>
                   </ListItem>
                 ))}
               </List>
               <div className="buttons">
-        {visibleCount < internships.length && (
-          <Button onClick={handleViewMore}>
+        {visibleCountIn < internships.length && (
+          <Button onClick={handleViewMoreIn}>
             View More
           </Button>
         )}
-        {visibleCount > 4 && (
-          <Button onClick={handleViewLess} >
+        {visibleCountIn > 1 && (
+          <Button onClick={handleViewLessIn} >
             View Less
           </Button>
         )}
@@ -109,7 +131,7 @@ const Work = () => {
         <p>Hackathons</p>
                 <div className="edu-group">
                 <List>
-                {hackathons.slice(0, visibleCount).map((item) => (
+                {hackathons.slice(0, visibleCountHack).map((item) => (
                   <ListItem key={item.name} disablePadding>
                     <div className="edu-card">
                         <div className="line-1">
@@ -123,13 +145,13 @@ const Work = () => {
                 ))}
               </List>
               <div className="buttons">
-        {visibleCount < hackathons.length && (
-          <Button onClick={handleViewMore}>
+        {visibleCountHack < hackathons.length && (
+          <Button onClick={handleViewMoreHack}>
             View More
           </Button>
         )}
-        {visibleCount > 4 && (
-          <Button onClick={handleViewLess} >
+        {visibleCountHack > 2 && (
+          <Button onClick={handleViewLessHack} >
             View Less
           </Button>
         )}
@@ -140,7 +162,7 @@ const Work = () => {
         <p>Projects</p>
                 <div className="edu-group">
                 <List>
-                {projects.slice(0, visibleCount).map((item) => (
+                {projects.slice(0, visibleCountProj).map((item) => (
                   <ListItem key={item.name} disablePadding>
                     <div className="edu-card">
                         <div className="line-1">
@@ -154,13 +176,13 @@ const Work = () => {
                 ))}
               </List>
               <div className="buttons">
-        {visibleCount < projects.length && (
-          <Button onClick={handleViewMore}>
+        {visibleCountProj < projects.length && (
+          <Button onClick={handleViewMoreProj}>
             View More
           </Button>
         )}
-        {visibleCount > 4 && (
-          <Button onClick={handleViewLess} >
+        {visibleCountProj > 2 && (
+          <Button onClick={handleViewLessProj} >
             View Less
           </Button>
         )}

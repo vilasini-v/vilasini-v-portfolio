@@ -33,12 +33,13 @@ body {
   font-weight: 400;
   transition: 0.2s;
   color:black;
+  text-align: center;
   
 }
 .primary-button a{
   color:black;
   text-align: center;
-  width:100%;
+  width:auto;
 }
 
 .intro-banner{
@@ -133,9 +134,9 @@ body {
 .content {
     height:250px;
     width:250px;
-    background: url(/src/vilasini.jpg) no-repeat;
+    background: url(/src/DSC_0852.JPG) no-repeat;
     background-size: 100%;
-    z-index: 1000;
+    z-index: 500;
     border-radius: 50%;
 }
 @keyframes animate {

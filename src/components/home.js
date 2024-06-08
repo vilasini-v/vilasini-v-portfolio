@@ -39,26 +39,20 @@ const Home=()=>{
             grade: '95.2%'
         }
     ];
-    const techList = [
+    const langList = [
              'HTML',
              'CSS',       
              'JavaScript',        
-             'React JS',        
              'Python',        
              'C/C++',
-             'tailwind CSS',
              'Java',        
     ]
-    const skills = [
-    "Communication",
-    "Teamwork and Collaboration",
-    "Problem-solving",
-    "Time management",
-    "Adaptability",
-    "Leadership",
-    "Networking",
-    "Creativity"
-  ];
+    const frameWorks=[
+            'React JS',
+            'Flutter',
+            'TensorFlow',
+            'pyTorch',
+    ]
   
     return(
         <div className="home-container">
@@ -66,7 +60,7 @@ const Home=()=>{
             <section className="intro-banner">
                 <div className="left-intro">
                     <h2>Hello,<br></br>I'm Vilasini!</h2>
-                    <p>Highly motivated and detail-oriented Computer Science student with a passion for coding and problem solving. Currently proficient and practicing in Front-end Web development. Demonstrated ability to work collaboratively in team projects and a strong desire to learn and grow in the field of computer science.</p>
+                    <p>Highly motivated and detail-oriented Computer Science student with a passion for coding and problem solving. Currently proficient and practicing in Front-end Web development and machine learning. Demonstrated ability to work collaboratively in team projects and a strong desire to learn and grow in the field of computer science.</p>
                     <button className="primary-button" style={{fontSize: '1rem'}}><SearchRoundedIcon style={{verticalAlign: 'middle'}}/><span><a href='https://www.linkedin.com/in/vilasini-vijay/'>linkedin.com/in/vilasini-vijay/</a></span></button>
                 </div>
                 <div className="right-intro">
@@ -119,9 +113,9 @@ const Home=()=>{
                 </div>
                 <div className="skillCards">
             <div className="skillCard">
-                <h2>Technical Skills</h2>
+                <h2>Languages</h2>
             <List>
-                {techList.map((item) => (
+                {langList.map((item) => (
                   <ListItem key={item.name} disablePadding>
                         <ListItemText primary={<><ArrowForwardIcon style={{verticalAlign: 'middle'}}/>{item}</>}/>
                   </ListItem>
@@ -129,9 +123,9 @@ const Home=()=>{
               </List>
             </div>
             <div className="skillCard">
-                <h2>Soft Skills</h2>
+                <h2>Frameworks</h2>
             <List>
-                {skills.map((item) => (
+                {frameWorks.map((item) => (
                   <ListItem key={item.name} disablePadding>
                         <ListItemText primary={<><ArrowForwardIcon style={{verticalAlign: 'middle'}}/>{item}</>}/>
                   </ListItem>
