@@ -1,6 +1,5 @@
 import React from "react";
 import Navbar from "./navbar";
-import LocalPhoneRoundedIcon from '@mui/icons-material/LocalPhoneRounded';
 import EmailRoundedIcon from '@mui/icons-material/EmailRounded';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import SearchRoundedIcon from '@mui/icons-material/SearchRounded';
@@ -75,7 +74,7 @@ const Home=()=>{
                     </div>
                     <div className="right-intro-bottom">
                         <p>Contact me at:</p><br></br>
-                        <LocalPhoneRoundedIcon style={{verticalAlign: 'middle'}}/> : <span><a href='https://wa.me/918884734650'>+91 8884734650</a></span><br></br>
+                        {/* <LocalPhoneRoundedIcon style={{verticalAlign: 'middle'}}/> : <span><a href='https://wa.me/918884734650'>+91 8884734650</a></span><br></br> */}
                         <EmailRoundedIcon style={{verticalAlign: 'middle'}}/> : <span><a href='mailto:vilasiniivj@gmail.com'>vilasiniivj@gmail.com</a></span><br></br>
                         <GitHubIcon style={{verticalAlign: 'middle'}}/> : <span><a href='https://github.com/vilasini-v'>github.com/vilasini-v</a></span><br></br>
                     </div>
