@@ -44,13 +44,17 @@ const Home=()=>{
              'JavaScript',        
              'Python',        
              'C/C++',
-             'Java',        
+             'Java',  
+             'SQL',
+             'R'      
     ]
     const frameWorks=[
             'React JS',
             'Flutter',
             'TensorFlow',
             'pyTorch',
+            'Langchain',
+            'NEXT JS'
     ]
   
     return(
