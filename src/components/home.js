@@ -49,7 +49,6 @@ const Home=()=>{
              'R'      
     ]
     const frameWorks=[
-            'Flutter',
             'React JS',
             'Flutter',
             'TensorFlow',
