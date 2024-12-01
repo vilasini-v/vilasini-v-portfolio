@@ -22,6 +22,12 @@ const Work = () => {
         }
     ];
     const hackathons=[
+      {
+        name:"SIH Hackathon",
+        year:"2024",
+        desc:"Developed an app that bridges farmers and retailers, offering a platform for open market interactions aligning with SDG 8, 9 and 10. Secured rank 1 out of 300 applications nationwide for our problem statement. Selected for finals (Mid-Decemeber 2024).",
+        techStacks:"Flutter, ML"
+      },
         {
             name:"WebDex",
             year:"2024",
@@ -54,6 +60,20 @@ const Work = () => {
         }
     ];
     const projects=[
+      {
+        name:"Online Job Portal",
+        link:"Not deployed",
+        year:'2024',
+        desc:"Building a portal to connect job seekers and clients, using ML for tailored job recommendations to the job seekers",
+        techStacks:"MongoDB, ReactJS, Flask, tailwind CSS"
+      },
+      {
+        name:"Personalized Online Mentor",
+        link:"Not deployed",
+        year:'2024',
+        desc:"Utilizing LLMs to generate comprehensive personalized reports of the tests taken, aiming for enhancing user learning outcomes, tracked through improved test completion rates.",
+        techStacks:"Django, Amazon RDS, ReactJS, tailwind CSS"
+      },
         {
         name:'Affirmations generator',
         link:'https://affirmations-iota.vercel.app/',
