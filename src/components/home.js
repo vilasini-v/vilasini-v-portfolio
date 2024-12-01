@@ -49,12 +49,14 @@ const Home=()=>{
              'R'      
     ]
     const frameWorks=[
+            'Flutter',
             'React JS',
             'Flutter',
             'TensorFlow',
             'pyTorch',
             'Langchain',
-            'NEXT JS'
+            'MongoDB',
+            'Flask'
     ]
   
     return(
