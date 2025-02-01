@@ -23,7 +23,7 @@ const Home=()=>{
         name: 'Vellore Institute of Technology',
         year: '2022-2026',
         specs: 'Bachelors of Technology in Computer Science',
-        grade: '9.15/10'
+        grade: '9.16/10'
         },
         {
             name: 'BASE PU college',
@@ -55,7 +55,10 @@ const Home=()=>{
             'pyTorch',
             'Langchain',
             'MongoDB',
-            'Flask'
+            'Flask',
+            'NodeJS',
+            'Django',
+            'AngularJS'
     ]
   
     return(

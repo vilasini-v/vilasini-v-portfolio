@@ -16,16 +16,16 @@ const Work = () => {
         },
         {
           company:"Reverse Innovations",
-          year: "June 2024",
+          year: "July 2024",
           position:"Software Research Intern",
           desc:"Worked with flutter to produce a CRM application on the frontend side."
         }
     ];
     const hackathons=[
       {
-        name:"SIH Hackathon",
+        name:"SIH Hackathon - Finalist",
         year:"2024",
-        desc:"Developed an app that bridges farmers and retailers, offering a platform for open market interactions aligning with SDG 8, 9 and 10. Secured rank 1 out of 300 applications nationwide for our problem statement. Selected for finals (Mid-Decemeber 2024).",
+        desc:"Developed an app that bridges farmers and retailers, offering a platform for open market interactions aligning with SDG 8, 9 and 10. Secured rank 1 out of 300 applications nationwide for our problem statement.",
         techStacks:"Flutter, ML"
       },
         {
@@ -60,6 +60,13 @@ const Work = () => {
         }
     ];
     const projects=[
+      {
+        name: "Better - a productivity app",
+        link: "Not in app store yet",
+        year:'2024',
+        desc: 'Built a flutter app with local storage (hive) for productivity. Contains screens such as Notes Page, a Habit Tracker and a Weekly task view page.',
+        techStacks: "Flutter and hiveDB"
+      },
       {
         name:"Online Job Portal",
         link:"Not deployed",
