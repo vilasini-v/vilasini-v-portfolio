@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './navbar';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 const Touch = () => {
   return (
     <div className='contact-container'>

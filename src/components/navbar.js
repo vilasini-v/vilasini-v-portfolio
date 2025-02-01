@@ -8,11 +8,25 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemText from "@mui/material/ListItemText";
 import MenuIcon from '@mui/icons-material/Menu';
 import './navbar.css';
-import resume from "../vilasini-resume.pdf";
+import resume from "../vilasini_resume_jan20.pdf";
 import StarRoundedIcon from '@mui/icons-material/StarRounded';
 import { Link } from "react-router-dom";
 const Navbar = (props) => {
     const [openMenu, setOpenMenu] = useState(false);
+    const handleDownloadClick = (e) => {
+      e.preventDefault();
+      
+      const shouldDownload = window.confirm('Do you want to download the resume?');
+      
+      if (shouldDownload) {
+        const link = document.createElement('a');
+        link.href = resume; // Use the imported resume directly
+        link.download = "vilasini_resume_jan20.pdf"; // Set the download filename
+        document.body.appendChild(link); // Append to body
+        link.click();
+        document.body.removeChild(link); // Clean up
+      }
+    }
     const menuOptions = [
       {
         text: "About  Me",
@@ -37,7 +51,7 @@ const Navbar = (props) => {
             </div>
           <div className="navbar-links-container">
             <a href="/" style={{color: props.color}}>About Me</a>
-            <a href={resume} style={{color: props.color}} download>Resume</a>
+            <a href={props.resume} onClick={handleDownloadClick} style={{ color: props.color }}>Resume</a>
             <a href='/work' style={{color: props.color}}>Work</a>
             <button className="primary-button"><a href='/contact'>Get in Touch</a></button>
           </div>
